@@ -1,38 +1,226 @@
-.App {
-  text-align: center;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html{
+  font-size: 62.5%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background:rgb(3, 0, 31);
+  color: white;
+  font-family: 'Poppins',sans-serif;
 }
-
-.App-header {
-  background-color: #282c34;
+.App{
   min-height: 100vh;
+  display: flex;
+}
+.sideBar{
+  flex: 3;
+  border-right: 1px solid rgb(100, 100, 100);
+}
+.main{
+  flex: 9;
+}
+.logo{
+  margin-right: 1rem;
+}
+.brand{
+  font-size: 2rem;
+ 
+}
+.upperSide{
+  padding: 2.5rem;
+  border-bottom: 1px solid rgb(100, 100, 100);
+  height: 70%;
+}
+.upperSideTop{
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.addBtn{
+  height: 2rem;
+  padding-right: 1rem;
+}
+.midBtn{
+  background: #5A4BFF;
+  border: none;
+  color: white;
+  padding: 1.5rem;
+  font-size: 1.5rem;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 3rem;
+border-radius: 0.5rem;
+}
+
+.query{
+  display: flex;
+  align-items: center;
+  background: transparent;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  width: 25rem;
+  border: 1px solid rgba(98, 98,98,1);
+  color: rgba(222, 222, 222, 1);
+  border-radius: 0.5rem;
+}
+.query img{
+  margin-right: 2rem;
+  object-fit: cover;
+  height: 1.7rem;
+}
+
+.lowerSide{
+  padding: 2rem;
+}
+.listItems{
+  margin: 0.75rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.5rem;
+
+}
+.listItems img{
+  margin: 1rem;
+  padding-right: 2rem;
+}
+.listItems:nth-child(1)>.listItemImg{
+  margin-right: 0.5rem;
+}
+.main{
+  min-height:calc(100vh - 14vh) ;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 1rem 5rem;
+}
+.main .nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+  margin-top: 0px;
+ 
+
+}
+.main .nav img{
+  width: 40px;
+  border-radius: 50%;
+
+}
+.main .greet{
+  margin: 20px 0px;
+  width: 80%;
+  font-size: 36px;
+  color: #c4c7c5;
+  font-weight: 500;
+  padding: 10px;
+}
+.main .greet span{
+  background: -webkit-linear-gradient(16deg,#4b90ff,#ff5546);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main .cards{
+  display: flex;
+  flex-wrap: wrap;
+  grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+  gap: 15px;
+  padding: 10px;
+  display: 80%;
+}
+.main .card{
+  height: 150px;
+  width: 150px;
+  padding: 15px;
+  background-color: #f0f4f9;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+
+}
+.main .card img{
+  width: 30px;
+  position: absolute;
+  background-color: white;
+  border-radius: 20px;
+  bottom: 10px;
+  right: 10px;
+}
+.main .card p{
+  color: #585858;
+  font-size: 12px;
+
+}
+.chats{
+  overflow-y: scroll;
+  width: 100%;
+  max-width: 70%;
+  margin: auto;
+  height: calc(100vh - 23rem);  
+}
+.chats::-webkit-scrollbar{
+  display: none;
+}
+.chat{
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+}
+.chats p{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.8;
+}
+.chatImg{
+  object-fit: cover;
+  width: 3.5rem;
+  margin-right: 2rem;
+  border-radius: 0.5rem;
+
+}
+.bot{
+  background: rgba(28, 30, 58, 1) ;
+  width: fit-content;
+  border-radius: 0.5rem;
+  width: 67rem;
+}
+.chatFooter{
+  margin-top: auto;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.inp{
+  padding: 0.5rem;
+  background: rgba(28, 30, 58, 1);
+  display: flex;
+align-items: center;
+border-radius: 0.5rem;
+width: 80rem;
+}
+.inp input{
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 1.25rem;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.inp input,.send{
+  background: transparent;
+  border: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.chatFooter p{
+  margin: 2rem 0;
 }
